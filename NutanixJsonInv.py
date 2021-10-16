@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-# nutanixInv.py
+# nutanixJsonInv.py
 
 # pip install glob2 in case you don't have the module.
 # 1) Export from Nutanix (Prism Element) console > VM > Json
