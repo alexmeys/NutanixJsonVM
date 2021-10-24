@@ -124,7 +124,7 @@ if content:
         print("\n... Exiting ...\n")
         quit()
 else:
-    print("\nNo json files found, please place them in them in the same directory as the script.")
+    print("\nNo json files found, please place them in the same directory as the script.")
     print("... Exiting ...\n")
     quit()
 
