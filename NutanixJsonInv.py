@@ -105,15 +105,22 @@ while type(opt) != int:
         print("\nThat's not a valid option\n")
         opt = 'nope'
 
-# Open file content in this variable from return
-content = openfile()
+# Calling exit before testing of files
+if opt == 4:
+    print("\n... Exiting ...\n")
+    quit()
 
-# Pass by pointer?
-if opt == 1:
-    handleoptions(1, content)
-elif opt == 2:
-    handleoptions(2, content)
-elif opt == 3:
-    handleoptions(3, content)
+# Load file if files are available
+content = openfile()
+if content:
+    if opt == 1:
+        handleoptions(1, content)
+    elif opt == 2:
+        handleoptions(2, content)
+    else:
+        handleoptions(3, content)
 else:
-    print("... Exiting ...")
+    print("\nNo json files found, please place them in them in the same directory as the script.")
+    print("... Exiting ...\n")
+    quit()
+
