@@ -110,7 +110,7 @@ if opt == 4:
     print("\n... Exiting ...\n")
     quit()
 
-# Load file if files are available, make layout nice
+# Load file if files are available
 content = openfile()
 
 if content:
