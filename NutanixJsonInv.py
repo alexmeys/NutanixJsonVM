@@ -82,7 +82,7 @@ def handleoptions(opt, data):
                         print(fitem)
 
 
-    elif opt == 3:
+    else:
         for sepfiles in data:
             for lines in sepfiles:
                 if not lines['IP Addresses']:
