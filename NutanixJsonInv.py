@@ -91,9 +91,9 @@ def handleoptions(opt, data):
                    
 # Start Program
 # Iterate until valid Menu option is chosen
-opt = 'nope'
-while type(opt) != int:
-    print("*** Menu ***")
+opt = 99
+while (opt > 4 or opt <= 0 ):
+    print("\n*** Menu ***")
     print("1. Print inventory")
     print("2. Find a VM")
     print("3. Print Offline VM's")
@@ -103,22 +103,26 @@ while type(opt) != int:
         opt = int(opt)
     except ValueError:
         print("\nThat's not a valid option\n")
-        opt = 'nope'
+        opt = 99
 
-# Calling exit before testing of files
+# Calling quit() before testing of files
 if opt == 4:
     print("\n... Exiting ...\n")
     quit()
 
-# Load file if files are available
+# Load file if files are available, make layout nice
 content = openfile()
+
 if content:
     if opt == 1:
         handleoptions(1, content)
     elif opt == 2:
         handleoptions(2, content)
-    else:
+    elif opt == 3:
         handleoptions(3, content)
+    else:
+        print("\n... Exiting ...\n")
+        quit()
 else:
     print("\nNo json files found, please place them in them in the same directory as the script.")
     print("... Exiting ...\n")
